@@ -1,39 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.4.4/math.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Web Calculator</title>
 </head>
+
 <body>
     <div class="calculator">
-        <div class="history"></div>
+       <div class="screen">
+        <ul class="history"></ul>
         <div class="expresion"></div>
-        <div class="result"></div>
+        <div class="result ">0</div>
+       </div>
         <hr>
         <div class="operations">
-            <span class="operator">C</span>
-            <span class="operator">X</span>
-            <span class="operator">%</span>
-            <span class="operator">/</span>
-            <span class="number">7</span>
-            <span class="number">8</span>
-            <span class="number">9</span>
-            <span class="operator">*</span>
-            <span class="number">4</span>
-            <span class="number">5</span>
-            <span class="number">6</span>
-            <span class="operator">-</span>
-            <span class="number">1</span>
-            <span class="number">2</span>
-            <span class="number">3</span>
-            <span class="operator">+</span>
-            <span class="operator">ª</span>
-            <span class="number">0</span>
-            <span class="number">.</span>
-            <span class=" equal">=</span>
+            <div>
+                <button class="clear">C</button>
+            </div>
+            <div>
+                <button class="delete">X</button>
+            </div>
+            <div>
+                <button class="operator">%</button>
+            </div>
+            <div>
+                <button class="operator">/</button>
+            </div>
+            <div>
+                <button class="number" >7</button>
+            </div>
+            <div>
+                <button class="number">8</button>
+            </div>
+            <div>
+                <button class="number">9</button>
+            </div>
+            <div>
+                <button class="operator">*</button>
+            </div>
+            <div>
+                <button class="number">4</button>
+            </div>
+            <div>
+                <button class="number">5</button>
+            </div>
+            <div>
+                <button class="number">6</button>
+            </div>
+            <div>
+                <button class="operator">-</button>
+            </div>
+            <div>
+                <button class="number">1</button>
+            </div>
+            <div>
+                <button class="number">2</button>
+            </div>
+            <div>
+                <button class="number">3</button>
+            </div>
+            <div>
+                <button class="operator">+</button>
+            </div>
+            <div>
+                <button class="more">ª</button>
+            </div>
+            <div>
+                <button class="number">0</button>
+            </div>
+            <div>
+                <button class="operator">.</button>
+            </div>
+            <div>
+                <button class="equal">=</button>
+            </div>
         </div>
     </div>
-    
+
+    <script src="code.js"></script>
 </body>
+
 </html>
