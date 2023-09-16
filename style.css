@@ -4,7 +4,7 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
- body {
+body {
     background-image: url("source/polygon-scatter-haikei.svg");
     background-position: center;
     background-repeat: no-repeat;
@@ -15,9 +15,12 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-} 
+}
 
 .calculator {
+    -webkit-box-shadow: -9px 19px 66px 6px rgba(0,0,0,0.75);
+    -moz-box-shadow: -9px 19px 66px 6px rgba(0,0,0,0.75);
+    box-shadow: -9px 19px 66px 6px rgba(0,0,0,0.75);
     background-color: rgb(53, 51, 51);
     margin: auto;
     border-radius: 10px;
@@ -26,18 +29,32 @@
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
     padding: 10px;
-    min-width: 250px;
+    min-width: 300px;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
 }
-.screen{
+
+.calculator:hover {
+    -webkit-box-shadow: -9px 19px 66px 20px rgba(0,0,0,0.75);
+    -moz-box-shadow: -9px 19px 66px 20px rgba(0,0,0,0.75);
+    box-shadow: -9px 19px 66px 20px rgba(0,0,0,0.75);
+}
+
+.screen {
     overflow: auto;
     display: flex;
     flex-direction: column;
     height: 20vh;
 }
-.screen::-webkit-scrollbar{
+
+.screen::-webkit-scrollbar {
     width: 1px;
 }
-.screen::-webkit-scrollbar-thumb{
+
+.screen::-webkit-scrollbar-thumb {
     background-color: rgb(40, 40, 40);
 
 }
@@ -49,7 +66,7 @@
     font-size: 20px;
 }
 
-.history li{
+.history li {
     color: rgb(105, 105, 105);
 
 }
@@ -82,7 +99,7 @@
 
 .operations {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-auto-rows: minmax(40px, 1fr);
     margin-bottom: 15px;
 
@@ -110,20 +127,41 @@
     background-color: rgb(108, 108, 108);
 }
 
-.operator, .delete, .equal, .more, .clear {
+.operator,
+.delete,
+.equal,
+.more,
+.clear {
     color: rgb(204, 144, 16);
 }
-li{
+
+li {
     list-style: none;
 }
-.onField{
+
+.onField {
     font-size: 30px;
     color: white;
 }
-.offField{
+
+.offField {
     font-size: 26px;
     color: rgb(105, 105, 105);
 
 }
 
+.special *, .special{
+    color: rgb(105, 105, 105);
+    font-size: 20px;
+}
+
+ /* .divSpecial{
+    display: none;
+}
+.operations{
+    grid-template-columns: repeat(4, 1fr);
+} 
+.calculator{
+    min-width: 250px;
+} */
 

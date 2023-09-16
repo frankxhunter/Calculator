@@ -19,13 +19,18 @@ numbers.forEach((e) => {
     e.addEventListener("click", () => {
         offResult()
         addExpresion(e.innerHTML);
+        bottomScroll()
+
     })
 });
 operators.forEach((e) => {
     e.addEventListener("click", () => {
         offResult()
-        if(validateOperator())
-        addExpresion(e.innerHTML);
+        bottomScroll()
+        if (validateOperator())
+            addExpresion(e.innerHTML);
+            bottomScroll()
+
     })
 });
 clear.addEventListener("click", () => {
@@ -45,7 +50,7 @@ equal.addEventListener("click", () => {
     if (!result.classList.contains("onField")) {
         history.innerHTML += `
     <li>${expresion.innerHTML + result.innerHTML}</li>`;
-        screen.scrollTop = screen.scrollHeight
+        bottomScroll()
         result.classList.add("onField");
         expresion.classList.add("offField");
         console.log(history);
@@ -82,11 +87,14 @@ function offResult() {
 
     }
 }
-function validateOperator(){
+function validateOperator() {
     let value = false;
-    let char = expresion.innerHTML.charAt(expresion.innerHTML.length-1);
-    if(!isNaN(char)){
+    let char = expresion.innerHTML.charAt(expresion.innerHTML.length - 1);
+    if (!isNaN(char)) {
         value = true;
     }
     return value;
+}
+function bottomScroll() {
+    screen.scrollTop = screen.scrollHeight
 }
