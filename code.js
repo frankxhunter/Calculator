@@ -63,7 +63,7 @@ function calculate() {
         if (number % 1 > 0) {
             number = number.toFixed(4)
         }
-        result.innerHTML = "= " + number
+        result.innerHTML = "=" + number
     } catch (error) {
         //There are nothing to do
     }

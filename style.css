@@ -26,17 +26,22 @@
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
     padding: 10px;
-    min-width: 250px;
+    width: 250px;
+
 }
 .screen{
     overflow: auto;
     display: flex;
     flex-direction: column;
     height: 20vh;
+    padding-right: 10px;
+    align-items: flex-end;
 }
 .screen::-webkit-scrollbar{
     width: 1px;
+    height: 5px;
 }
+
 .screen::-webkit-scrollbar-thumb{
     background-color: rgb(40, 40, 40);
 
@@ -57,7 +62,6 @@
 .expresion {
     text-align: right;
     margin-top: 1.3vh;
-    padding-right: 10px;
     height: 4vh;
     font-size: 30px;
     transition: .2s;
@@ -69,7 +73,6 @@
 
 .result {
     text-align: right;
-    padding-right: 10px;
     padding-top: 2vh;
     font-size: 26px;
     color: rgb(105, 105, 105);
@@ -78,6 +81,8 @@
     -moz-transition: .2s;
     -ms-transition: .2s;
     -o-transition: .2s;
+    max-height: 4vh;
+
 }
 
 .operations {
